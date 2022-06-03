@@ -32,25 +32,15 @@ $("div").click(function(evt){
         board[evt.target.id] = currentPlayer
         evt.target.innerText = players[currentPlayer]
         currentPlayer *= -1
-       // document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
-       } else {
+           } else {
         console.log("not working")
     }
   });
 
-//   $('#square div').each(function(idx) {
-//     console.log(this.innerText);
-//   });
-//render()
 
-function changePlayer() {
- 
-}
-
-function validateResults() {
-
-}
-
-function restartGame() {
- 
-}
+$("#reset").click(function(evt) {
+  $('#square div').each(function(idx) {
+     this.innerText=''
+  })
+  board = ['', '', '', '', '', '', '', '', ''];
+})
